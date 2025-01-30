@@ -15,10 +15,11 @@
 </head>
 
 <body>
+    <!-- Logo no topo -->
     <div class="w-full flex justify-center p-2">
         <img src="./assets/img/talentosfuturo.png" alt="Talentos do Futuro" class="max-w-full h-auto">
     </div>
-    
+
     <header>
         <div class="container mx-auto py-5 px-4 flex items-center justify-between">
             <a href="/">
@@ -26,25 +27,54 @@
             </a>
         </div>
     </header>
-    
+
     <main class="container mx-auto flex items-center w-full flex-wrap justify-center">
         <article class="md:w-6/12 p-4">
-            <h1 class="text-5xl mb-4 font-bold text-zinc-900">TALENTOS<br> <strong
-                    class="bg-gradient-to-r from-green-700 to-blue-600 via-yellow-500 bg-clip-text text-transparent"> DE FUTURO</strong>!</h1>
-            <p class="text-lg font-normal text-zinc-900 mb-6">O MediQuo é uma solução de telesaúde que garante aos
-                usuários acesso imediato a consultas médicas e teleorientação veterinária no formato online.</p>
+            <h1 class="text-5xl mb-4 font-bold text-zinc-900">TALENTOS<br> 
+                <strong class="bg-gradient-to-r from-green-700 to-blue-600 via-yellow-500 bg-clip-text text-transparent">
+                    DE FUTURO
+                </strong>!
+            </h1>
+            <p class="text-lg font-normal text-zinc-900 mb-6">
+                O MediQuo é uma solução de telesaúde que garante aos usuários acesso imediato a consultas médicas e teleorientação veterinária no formato online.
+            </p>
             <a id="consultaBtn" class="bg-emerald-500 text-slate-50 text-base font-medium py-3 px-4 rounded-md mt-4 hover:bg-emerald-400 uppercase drop-shadow-lg">Clique para iniciar sua consulta</a>
         </article>
         <article class="md:w-6/12 p-4">
             <img src="./assets/img/home.webp" alt="Imagem de casa">
         </article>
     </main>
-  
-    <script
-        type="text/javascript"
-        src="https://widget.mediquo.com/js/1.0.0/mediquo.js"
-    ></script>
+
+    <!-- Modal de login -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <form id="consultaForm">
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" required>
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+                <button type="submit" class="bg-emerald-500 text-slate-50 text-base font-medium py-2 px-4 rounded-md mt-4 hover:bg-emerald-400 uppercase drop-shadow-lg">Iniciar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Seção de destaque com gradiente -->
+    <section class="bg-emerald-400 mb-6 relative isolate flex items-center overflow-hidden px-6 py-2.5">
+        <div class="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
+            aria-hidden="true">
+            <div class="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-80"
+                style="clip-path: polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)">
+            </div>
+        </div>
+    </section>
+
+    <!-- Widget MediQuo -->
+    <script type="text/javascript" src="https://widget.mediquo.com/js/1.0.0/mediquo.js"></script>
+
+    <!-- Scripts -->
     <script src="assets/js/scripts.js"></script>
+
     <script>
         $(document).ready(function () {
             const finalValues = [76722.31, 153444.62];
@@ -63,8 +93,8 @@
                     }
                     const integerPart = Math.floor(currentValue).toLocaleString('pt-BR');
                     const decimalPart = Math.round((currentValue % 1) * 100).toString().padStart(2, '0');
-                    $(#counter${index + 1}).text(integerPart);
-                    $(#decimal${index + 1}).text(',' + decimalPart);
+                    $(`#counter${index + 1}`).text(integerPart);
+                    $(`#decimal${index + 1}`).text(',' + decimalPart);
                 }, interval);
             }
 
