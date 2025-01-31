@@ -15,6 +15,8 @@
     <style>
         html {
             scroll-behavior: smooth;
+            height: 100%; /* Garante que o HTML ocupe toda a altura da tela */
+            overflow: hidden; /* Impede o scroll */
         }
 
         body {
@@ -28,7 +30,7 @@
 
         /* Logo */
         .logo-container {
-            margin-top: 10vh; /* Distância do topo para a logo */
+            margin-top: 10vh;
             display: flex;
             justify-content: center;
         }
@@ -42,8 +44,8 @@
         .text-container {
             text-align: center;
             color: white;
-            margin: 0 20px; /* Ajusta o espaçamento em torno do texto */
-            margin-top: 10vh; /* Distância do texto a partir do topo */
+            margin: 0 20px;
+            margin-top: 10vh;
             flex-grow: 0;
         }
 
@@ -52,7 +54,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 5vh; /* Distância do botão em relação ao texto */
+            margin-top: 5vh;
         }
 
         .cta-button {
