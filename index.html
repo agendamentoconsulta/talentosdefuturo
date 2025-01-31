@@ -108,13 +108,24 @@
             border-radius: 4px;
         }
 
-        /* Linha abaixo do botão "CLIQUE PARA INICIAR SUA CONSULTA" */
+        /* Linha verde com borda superior em degradê */
         #consultaBtn + div {
             width: 100%;
             height: 3px;
-            background: linear-gradient(to right, #ffffff, #c0a4e3, #491E9C);
-            margin-top: 20px;
+            background: #34d399;
+            position: relative;
         }
+
+        #consultaBtn + div::before {
+            content: "";
+            position: absolute;
+            top: -1px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, #ffffff, #c0a4e3, #491E9C);
+        }
+
     </style>
 </head>
 
@@ -136,7 +147,7 @@
             Nossa missão é cuidar de você e de quem você ama!
         </p>
         <a id="consultaBtn" class="bg-white text-[#491E9C] text-base font-medium py-3 px-4 rounded-md mt-4 hover:bg-[#c0a4e3] uppercase drop-shadow-lg">Clique para iniciar sua consulta</a>
-        <!-- Linha de degradê -->
+        <!-- Linha de degradê na borda superior -->
         <div></div>
     </main>
 
