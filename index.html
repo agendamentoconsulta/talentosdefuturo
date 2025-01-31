@@ -11,7 +11,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    
+
     <style>
         html {
             scroll-behavior: smooth;
@@ -88,10 +88,11 @@
             background-color: #fefefe;
             padding: 20px;
             border: 1px solid #888;
-            width: auto; /* Para que o modal tenha a largura do conteúdo */
+            width: 100%; /* Faz o modal ocupar toda a largura disponível dentro do container */
             max-width: 400px; /* A mesma largura do botão */
             border-radius: 8px;
             box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            margin: 0 auto; /* Centraliza o modal */
         }
 
         .close {
@@ -119,7 +120,6 @@
             border-radius: 4px;
             width: 100%; /* Para os inputs ocuparem toda a largura disponível dentro do modal */
         }
-
     </style>
 </head>
 
