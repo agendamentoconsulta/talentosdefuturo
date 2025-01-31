@@ -26,6 +26,7 @@
             padding: 0;
             display: flex;
             flex-direction: column;
+            align-items: center;
         }
 
         /* Logo */
@@ -45,8 +46,7 @@
             text-align: center;
             color: white;
             margin: 0 20px;
-            margin-top: 10vh;
-            flex-grow: 0;
+            margin-top: 5vh;
         }
 
         /* Botão */
@@ -55,6 +55,7 @@
             justify-content: center;
             align-items: center;
             margin-top: 5vh;
+            margin-bottom: 5vh; /* Espaço entre o botão e o modal */
         }
 
         .cta-button {
@@ -67,9 +68,9 @@
             font-weight: 500;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease;
-            width: auto; /* Tamanho original do botão */
+            width: 100%; /* Largura 100% para ocupar o espaço disponível */
             max-width: 400px; /* Limita a largura máxima */
-            display: inline-block; /* Ajusta a largura ao conteúdo */
+            display: inline-block;
         }
 
         .cta-button:hover {
@@ -82,6 +83,10 @@
             position: absolute;
             z-index: 1;
             background-color: rgba(0, 0, 0, 0.4);
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
         }
 
         .modal-content {
@@ -92,7 +97,7 @@
             max-width: 400px; /* A mesma largura do botão */
             border-radius: 8px;
             box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-            margin: 0 auto; /* Centraliza o modal */
+            margin: 0 auto;
         }
 
         .close {
@@ -125,7 +130,7 @@
         @media (max-width: 768px) {
             .cta-button {
                 width: 80%; /* Garante que o botão ocupe 80% da largura da tela em mobile */
-                max-width: 400px; /* Ainda limita a largura máxima para manter o design */
+                max-width: 400px; /* Limita a largura máxima */
             }
 
             .modal-content {
