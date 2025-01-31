@@ -48,6 +48,10 @@
             color: white;
             margin: 0 20px;
             margin-bottom: 5vh; /* Margem para o botão não ficar colado ao texto */
+            width: auto;
+            max-width: 300px; /* Garantindo que o texto tenha a mesma largura do botão */
+            margin-left: auto;
+            margin-right: auto; /* Centraliza o texto */
         }
 
         /* Botão */
@@ -68,6 +72,8 @@
             font-weight: 500;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease;
+            width: 100%; /* Faz o botão ocupar 100% da largura permitida */
+            max-width: 325px; /* Tamanho máximo igual ao da modal */
         }
 
         .cta-button:hover {
