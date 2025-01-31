@@ -59,8 +59,9 @@
             margin-top: 10vh;
         }
 
+        /* Botão "CLIQUE PARA INICIAR SUA CONSULTA" com efeito degradê */
         .cta-button {
-            background-color: white;
+            background-image: linear-gradient(45deg, #ffffff, #c0a4e3);
             color: #491E9C;
             font-size: 1rem;
             padding: 15px 25px;
@@ -70,15 +71,31 @@
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease;
             border: 2px solid #491E9C;
+            background-size: 200% 200%; /* Faz o degradê ocupar mais espaço */
+            animation: gradientMovement 3s ease infinite; /* Animação do movimento do degradê */
         }
 
+        /* Efeito de animação do degradê */
+        @keyframes gradientMovement {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Efeito de hover no botão */
         .cta-button:hover {
             background-color: #c0a4e3;
         }
 
         /* Estilo do botão "INICIAR" no modal */
         button[type="submit"] {
-            background-color: white;
+            background-image: linear-gradient(45deg, #ffffff, #c0a4e3);
             color: #491E9C;
             font-size: 1rem;
             padding: 15px 25px;
@@ -88,6 +105,8 @@
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease;
             border: 2px solid #491E9C; /* Contorno roxo */
+            background-size: 200% 200%; /* Faz o degradê ocupar mais espaço */
+            animation: gradientMovement 3s ease infinite; /* Animação do movimento do degradê */
         }
 
         button[type="submit"]:hover {
