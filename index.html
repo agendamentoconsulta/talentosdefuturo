@@ -30,7 +30,7 @@
             justify-content: space-between;
             border-radius: 20px;
             background-color: #E4EBFF;
-            box-shadow: 2px 1px 5px 0px rgba(0, 22, 86, 0.06), 8px 4px 9px 0px rgba(0, 22, 86, 0.05), 17px 9px 12px 0px rgba(0, 22, 86, 0.03), 31px 15px 14px 0px rgba(0, 22, 86, 0.01), 49px 24px 15px 0px rgba(0, 22, 86, 0);
+            box-shadow: 2px 1px 5px 0px rgba(0, 22, 86, 0.06), 8px 4px 9px 0px rgba(0, 22, 86, 0.05), 17px 9px 12px 0px rgba(0, 0, 0, 0.03), 31px 15px 14px 0px rgba(0, 0, 0, 0.01), 49px 24px 15px 0px rgba(0, 22, 86, 0);
         }
 
         .card-icon {
@@ -45,7 +45,7 @@
             position: absolute;
             left: 50%;
             transform: translate(-50%, -50%);
-            box-shadow: 2px 1px 5px 0px rgba(0, 22, 86, 0.06), 8px 4px 9px 0px rgba(0, 22, 86, 0.05), 17px 9px 12px 0px rgba(0, 22, 86, 0.03), 31px 15px 14px 0px rgba(0, 22, 86, 0.01), 49px 24px 15px 0px rgba(0, 22, 86, 0);
+            box-shadow: 2px 1px 5px 0px rgba(0, 22, 86, 0.06), 8px 4px 9px 0px rgba(0, 22, 86, 0.05), 17px 9px 12px 0px rgba(0, 0, 0, 0.03), 31px 15px 14px 0px rgba(0, 0, 0, 0.01), 49px 24px 15px 0px rgba(0, 22, 86, 0);
         }
 
         .card-icon i {
@@ -114,12 +114,13 @@
             height: 3px;
             background: #34d399;
             position: relative;
+            overflow: hidden;
         }
 
         #consultaBtn + div::before {
             content: "";
             position: absolute;
-            top: -1px;
+            top: 0;
             left: 0;
             width: 100%;
             height: 3px;
