@@ -19,6 +19,10 @@
 
         body {
             background-color: #491E9C;
+            height: 100vh; /* Faz a página ocupar toda a altura da tela */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Espaçamento entre os elementos */
         }
 
         /* CARD */
@@ -136,20 +140,18 @@
         <img src="./assets/img/talentosfuturo.png" alt="Talentos do Futuro" class="max-w-[300px] h-auto"> <!-- Ajustando o tamanho da logo -->
     </div>
 
-    <header>
-        <div class="container mx-auto py-5 px-4 flex items-center justify-between">
-            <!-- AQUI FOI REMOVIDO O LOGO QUE ESTAVA DUPLICADO -->
-        </div>
-    </header>
-
-    <main class="container mx-auto flex items-center w-full flex-wrap justify-center">
-        <p class="text-lg font-normal text-zinc-900 mb-6" style="color: white;">
+    <main class="container mx-auto flex items-center w-full flex-wrap justify-center flex-grow"> <!-- Flex-grow para ocupar o espaço restante -->
+        <p class="text-lg font-normal text-zinc-900 mb-6" style="color: white; text-align: center;">
             Nossa missão é cuidar de você e de quem você ama!
         </p>
-        <a id="consultaBtn" class="bg-white text-[#491E9C] text-base font-medium py-3 px-4 rounded-md mt-4 hover:bg-[#c0a4e3] uppercase drop-shadow-lg">Clique para iniciar sua consulta</a>
-        <!-- Linha com efeito degradê (sem a linha verde) -->
-        <div></div>
     </main>
+
+    <!-- Botão na parte inferior da página -->
+    <footer class="w-full flex justify-center mb-10"> <!-- Alinhando o botão na parte inferior com margem -->
+        <a id="consultaBtn" class="bg-white text-[#491E9C] text-base font-medium py-3 px-4 rounded-md mt-4 hover:bg-[#c0a4e3] uppercase drop-shadow-lg">
+            Clique para iniciar sua consulta
+        </a>
+    </footer>
 
     <!-- Modal de login -->
     <div id="modal" class="modal">
