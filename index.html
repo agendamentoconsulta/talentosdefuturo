@@ -67,8 +67,9 @@
             font-weight: 500;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease;
-            width: 100%; /* Garantindo que o botão ocupe toda a largura disponível */
+            width: auto; /* Tamanho original do botão */
             max-width: 400px; /* Limita a largura máxima */
+            display: inline-block; /* Ajusta a largura ao conteúdo */
         }
 
         .cta-button:hover {
@@ -87,8 +88,8 @@
             background-color: #fefefe;
             padding: 20px;
             border: 1px solid #888;
-            width: 100%; /* Faz com que o modal ocupe toda a largura disponível */
-            max-width: 400px; /* Limita a largura máxima */
+            width: auto; /* Para que o modal tenha a largura do conteúdo */
+            max-width: 400px; /* A mesma largura do botão */
             border-radius: 8px;
             box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
         }
@@ -116,7 +117,7 @@
             margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            width: 100%; /* Faz com que os inputs ocupem toda a largura disponível */
+            width: 100%; /* Para os inputs ocuparem toda a largura disponível dentro do modal */
         }
 
     </style>
