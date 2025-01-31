@@ -15,8 +15,8 @@
     <style>
         html {
             scroll-behavior: smooth;
-            height: 100%; /* Garante que o HTML ocupe toda a altura da tela */
-            overflow: hidden; /* Impede o scroll */
+            height: 100%;
+            overflow: hidden;
         }
 
         body {
@@ -26,15 +26,14 @@
             padding: 0;
             display: flex;
             flex-direction: column;
-            justify-content: flex-start; /* Flex-start para alinhar elementos do topo para baixo */
-            padding-top: 10vh; /* Espaço para começar a logo mais no topo */
+            justify-content: flex-start;
+            padding-top: 10vh;
         }
 
-        /* Logo */
         .logo-container {
             display: flex;
             justify-content: center;
-            margin-bottom: 5vh; /* Margem para o texto não ficar colado à logo */
+            margin-bottom: 5vh;
         }
 
         .logo-container img {
@@ -42,24 +41,22 @@
             height: auto;
         }
 
-        /* Texto */
         .text-container {
             text-align: center;
             color: white;
             margin: 0 20px;
-            margin-bottom: 5vh; /* Margem para o botão não ficar colado ao texto */
+            margin-bottom: 5vh;
             width: auto;
-            max-width: px; /* Garantindo que o texto tenha a mesma largura do botão */
+            max-width: 325px;
             margin-left: auto;
-            margin-right: auto; /* Centraliza o texto */
+            margin-right: auto;
         }
 
-        /* Botão */
         .cta-button-container {
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-top: 10vh; /* O botão ficará um pouco abaixo do centro da tela */
+            margin-top: 10vh;
         }
 
         .cta-button {
@@ -72,14 +69,32 @@
             font-weight: 500;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease;
-            border: 2px solid #491E9C; /* Adicionando borda roxa */
+            border: 2px solid #491E9C;
         }
 
         .cta-button:hover {
             background-color: #c0a4e3;
         }
 
-        /* Modal */
+        /* Estilo do botão "INICIAR" no modal */
+        button[type="submit"] {
+            background-color: white;
+            color: #491E9C;
+            font-size: 1rem;
+            padding: 15px 25px;
+            border-radius: 8px;
+            text-transform: uppercase;
+            font-weight: 500;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            border: 2px solid #491E9C; /* Contorno roxo */
+        }
+
+        button[type="submit"]:hover {
+            background-color: #c0a4e3;
+            transform: scale(1.05); /* Aumenta o tamanho do botão */
+        }
+
         .modal {
             display: none;
             position: absolute;
@@ -117,33 +132,28 @@
         input {
             padding: 10px;
             margin-bottom: 10px;
-            border: 2px solid #491E9C; /* Contorno roxo nos campos */
+            border: 2px solid #491E9C;
             border-radius: 4px;
         }
 
-        /* Foco no campo de input */
         input:focus {
             outline: none;
-            border-color: #491E9C; /* Mantém a borda roxa ao focar no campo */
+            border-color: #491E9C;
         }
-
     </style>
 </head>
 
 <body>
-    <!-- Logo no topo -->
     <div class="logo-container">
         <img src="./assets/img/talentosfuturo.png" alt="Talentos do Futuro">
     </div>
 
-    <!-- Texto -->
     <div class="text-container">
         <p class="text-lg font-normal">
             Nossa missão é cuidar de você e de quem você ama!
         </p>
     </div>
 
-    <!-- Botão "CLIQUE PARA INICIAR SUA CONSULTA" -->
     <div class="cta-button-container">
         <a href="#" id="consultaBtn" class="cta-button">
             Clique para iniciar sua consulta
@@ -164,10 +174,7 @@
         </div>
     </div>
 
-    <!-- Widget MediQuo -->
     <script type="text/javascript" src="https://widget.mediquo.com/js/1.0.0/mediquo.js"></script>
-
-    <!-- Scripts -->
     <script src="assets/js/scripts.js"></script>
 
 </body>
