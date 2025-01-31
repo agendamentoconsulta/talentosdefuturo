@@ -59,7 +59,6 @@
             margin-top: 10vh;
         }
 
-        /* Botão "CLIQUE PARA INICIAR SUA CONSULTA" com efeito degradê */
         .cta-button {
             background-image: linear-gradient(45deg, #ffffff, #c0a4e3);
             color: #491E9C;
@@ -71,11 +70,10 @@
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease;
             border: 2px solid #491E9C;
-            background-size: 200% 200%; /* Faz o degradê ocupar mais espaço */
-            animation: gradientMovement 3s ease infinite; /* Animação do movimento do degradê */
+            background-size: 200% 200%; 
+            animation: gradientMovement 3s ease infinite; 
         }
 
-        /* Efeito de animação do degradê */
         @keyframes gradientMovement {
             0% {
                 background-position: 0% 50%;
@@ -88,12 +86,10 @@
             }
         }
 
-        /* Efeito de hover no botão */
         .cta-button:hover {
             background-color: #c0a4e3;
         }
 
-        /* Estilo do botão "INICIAR" no modal */
         button[type="submit"] {
             background-image: linear-gradient(45deg, #ffffff, #c0a4e3);
             color: #491E9C;
@@ -104,14 +100,14 @@
             font-weight: 500;
             box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
             transition: background-color 0.3s ease;
-            border: 2px solid #491E9C; /* Contorno roxo */
-            background-size: 200% 200%; /* Faz o degradê ocupar mais espaço */
-            animation: gradientMovement 3s ease infinite; /* Animação do movimento do degradê */
+            border: 2px solid #491E9C; 
+            background-size: 200% 200%; 
+            animation: gradientMovement 3s ease infinite;
         }
 
         button[type="submit"]:hover {
             background-color: #c0a4e3;
-            transform: scale(1.05); /* Aumenta o tamanho do botão */
+            transform: scale(1.05);
         }
 
         .modal {
@@ -179,7 +175,6 @@
         </a>
     </div>
 
-    <!-- Modal de login -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
